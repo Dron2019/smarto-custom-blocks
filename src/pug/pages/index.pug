@@ -1,0 +1,29 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'project'
+    var id_page = 'home'
+    var class_page = 'home '
+
+block meta
+  title= 'Щасливий у Дніпрі'
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+block content
+  h1 Типові блоки для використання на сайтах Smarto Agency
+  h2 Картка новин
+  include ../components/cards/news-card.pug
+  +githubSourceFileLink('template', 'pug/components/cards/news.pug')
+  +githubSourceFileLink('scss', 'assets/styles/components/news-card.scss')
+  h2 Картка ходу будівництва
+  include ../components/cards/progress-card.pug
+  +githubSourceFileLink('scss', 'assets/styles/components/cards/progress-card.scss')
+  +githubSourceFileLink('template', 'src/pug/components/cards/progress-card.pug')
+  h2 Блок картинка/текст
+  include ../components/blocks/block-img-text.pug
+  +githubSourceFileLink('scss', 'assets/styles/components/blocks/block-img-text.scss')
+  +githubSourceFileLink('template', 'src/pug/components/blocks/block-img-text.pug')
+  
