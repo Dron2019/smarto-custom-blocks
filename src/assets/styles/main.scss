@@ -26,9 +26,11 @@
 @import './components/delimiter';
 @import './components/cards/progress-card';
 @import './components/blocks/block-img-text';
+@import '../../pug/components/blocks/single-news-container/single-news-container';
 
 
 @import './components/sliders/zoom-slider';
+@import './components/sliders/fullscreen-mouse-slider';
 
 //@import 'pages/contacts';
 //@import 'pages/contact';

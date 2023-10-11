@@ -1,0 +1,18 @@
+section.fullscreen-mouse-slider
+    .fullscreen-mouse-slider-swiper__wrapper
+        .fullscreen-mouse-slider-swiper.swiper-container
+            .swiper-wrapper
+                .swiper-slide
+                    img(src='./assets/images/logo.svg' alt='img')
+                .swiper-slide
+                    img(src='./assets/images/logo.svg' alt='img')
+            .gallery-slider__amount
+                .gallery-slider__current(data-current)
+                    span(data-first-digit)
+                span.slider__divider /
+                span.slider__all(data-total)
+            .fullscreen-mouse-slider-moving-arrow
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.1426 30L29.2847 15.8579M29.2847 15.8579L15.1426 1.71573M29.2847 15.8579H1.00044" stroke="#282620"/>
+                </svg>
+            .fullscreen-mouse-slider-pagination-mobile

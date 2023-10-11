@@ -21,6 +21,7 @@ block content
     include ../components/cards/news-card.pug
     +githubSourceFileLink('template', 'pug/components/cards/news.pug')
     +githubSourceFileLink('scss', 'assets/styles/components/news-card.scss')
+    hr
     h2 Картка ходу будівництва
     include ../components/cards/progress-card.pug
     +githubSourceFileLink('scss', 'assets/styles/components/cards/progress-card.scss')
@@ -29,6 +30,7 @@ block content
     include ../components/blocks/block-img-text.pug
     +githubSourceFileLink('scss', 'assets/styles/components/blocks/block-img-text.scss')
     +githubSourceFileLink('template', 'pug/components/blocks/block-img-text.pug')
+    hr
     h2 Простий слайдер з навігацією
     include ../components/sliders/zoom-slider.pug
     .row
@@ -38,4 +40,23 @@ block content
         +githubSourceFileLink('template', 'pug/components/sliders/zoom-slider.pug')
       .col-2 
         +githubSourceFileLink('js', 'pug/components/sliders/zoom-slider.js')
+    hr
+    h2 Повноєкранний слайдер з навігацією через мишку
+    include ../components/sliders/fullscreen-mouse-slider/fullscreen-mouse-slider.pug
+    .row
+      .col-2
+        +githubSourceFileLink('scss', 'assets/styles/components/sliders/fullscreen-mouse-slider/fullscreen-mouse-slider.scss')
+      .col-2
+        +githubSourceFileLink('template', 'pug/components/sliders/fullscreen-mouse-slider/fullscreen-mouse-slider.pug')
+      .col-2 
+        +githubSourceFileLink('js', 'pug/components/sliders/fullscreen-mouse-slider/fullscreen-mouse-slider.js')
+    hr
+    h2 Блок з відкритою новиною
+    include ../components/blocks/single-news-container/single-news-container.pug
+    .row
+      .col-2
+        +githubSourceFileLink('scss', 'pug/components/blocks/single-news-container/single-news-container.scss')
+      .col-2
+        +githubSourceFileLink('template', 'pug/components/blocks/single-news-container/single-news-container.pug')
+    hr
   
