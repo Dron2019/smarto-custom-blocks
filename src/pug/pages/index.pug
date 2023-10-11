@@ -11,19 +11,31 @@ block meta
   meta(name='description', content='')
 block head
     link(rel='stylesheet', href="./assets/styles/main.min.css")
+    script(defer src="./assets/scripts/vendors.bundle.js")
+    script(defer src="./assets/scripts/index.bundle.js")
 block scripts
 block content
-  h1 Типові блоки для використання на сайтах Smarto Agency
-  h2 Картка новин
-  include ../components/cards/news-card.pug
-  +githubSourceFileLink('template', 'pug/components/cards/news.pug')
-  +githubSourceFileLink('scss', 'assets/styles/components/news-card.scss')
-  h2 Картка ходу будівництва
-  include ../components/cards/progress-card.pug
-  +githubSourceFileLink('scss', 'assets/styles/components/cards/progress-card.scss')
-  +githubSourceFileLink('template', 'src/pug/components/cards/progress-card.pug')
-  h2 Блок картинка/текст
-  include ../components/blocks/block-img-text.pug
-  +githubSourceFileLink('scss', 'assets/styles/components/blocks/block-img-text.scss')
-  +githubSourceFileLink('template', 'src/pug/components/blocks/block-img-text.pug')
+  .container
+    h1 Типові блоки для використання на сайтах Smarto Agency
+    h2 Картка новин
+    include ../components/cards/news-card.pug
+    +githubSourceFileLink('template', 'pug/components/cards/news.pug')
+    +githubSourceFileLink('scss', 'assets/styles/components/news-card.scss')
+    h2 Картка ходу будівництва
+    include ../components/cards/progress-card.pug
+    +githubSourceFileLink('scss', 'assets/styles/components/cards/progress-card.scss')
+    +githubSourceFileLink('template', 'src/pug/components/cards/progress-card.pug')
+    h2 Блок картинка/текст
+    include ../components/blocks/block-img-text.pug
+    +githubSourceFileLink('scss', 'assets/styles/components/blocks/block-img-text.scss')
+    +githubSourceFileLink('template', 'src/pug/components/blocks/block-img-text.pug')
+    h2 Простий слайдер з навігацією
+    include ../components/sliders/zoom-slider.pug
+    .row
+      .col-2
+        +githubSourceFileLink('scss', 'assets/styles/components/sliders/zoom-slider')
+      .col-2
+        +githubSourceFileLink('template', 'src/pug/components/zoom-slider.pug')
+      .col-2 
+        +githubSourceFileLink('js', 'src/pug/components/zoom-slider.js')
   

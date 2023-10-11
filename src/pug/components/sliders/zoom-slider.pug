@@ -1,0 +1,54 @@
+-
+    var sec7 = [
+        {
+            text: "Bisiklet Parkuru",
+            img: './assets/images/logo.svg'
+        },
+        {
+            text: "210 Metre Gölet",
+            img: './assets/images/logo.svg'
+        },
+        {
+            text: "Hobi Bahçeleri",
+            img: './assets/images/logo.svg'
+        },
+        {
+            text: "Çim Amfi& Açık Hava Sineması",
+            img: './assets/images/logo.svg'
+        },
+        {
+            text: "Koru Alanı",
+            img: './assets/images/logo.svg'
+        },
+        {
+            text: "Yoga & Feng Shuı Bahçesi",
+            img: './assets/images/logo.svg'
+        },
+        {
+            text: "Koşu Parkuru",
+            img: './assets/images/logo.svg'
+        },
+        {
+            text: "Oyun Alanları",
+            img: './assets/images/logo.svg'
+        },
+        {
+            text: "Palmiye Adası",
+            img: './assets/images/logo.svg'
+        }
+    ];
+section.screen3
+    .zoom-slider-navigation
+        <svg data-screen3-prev width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 1; visibility: inherit;">
+            <path d="M9.90244 0H6L22.0976 16L6 32H9.90244L26 16L9.90244 0Z" fill="#1C1D22"></path>
+        </svg>
+        <svg data-screen3-next width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity: 1; visibility: inherit;">
+            <path d="M9.90244 0H6L22.0976 16L6 32H9.90244L26 16L9.90244 0Z" fill="#1C1D22"></path>
+        </svg>
+    .zoom-slider-wrapper
+        .zoom-slider.swiper-wrapper
+            each val in sec7 
+                .slide.swiper-slide
+                    img(src=val.img)
+                    div 
+                        | #{val.text}
