@@ -26,4 +26,4 @@ fullscreenMouseSlider();
 paralaxImage(document.querySelector('.paralax-image'), null, gsap);
 
 
-console.log('for deploy');
+console.log('for deploy 1111');
