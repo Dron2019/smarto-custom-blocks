@@ -1,0 +1,42 @@
+name: NodeJS with Gulp
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        yarn install
+        gulp bundle
+#deploy
+    - name: 📂 deploy
+      uses: SamKirkland/web-deploy@v1
+      with:
+        target-server: customsh.ftp.tools
+        remote-user: customsh
+        ssh-port: 22
+        private-ssh-key: ${{ secrets.DEPLOY_SECRET }}
+        source-path: ./dist/
+        destination-path: ~/smarto.com.ua/frontend
+        rsync-options: --archive --verbose --compress --human-readable --progress --exclude=.git* --exclude=.git/ --exclude=README.md --exclude=readme.md --exclude=.gitignore  --size-only --checksum --log-file=mylog.log
+    - name: Make log file
+      run: |
+        echo $(date '+%Y-%m-%d %H:%M:%S') >> mylog.log

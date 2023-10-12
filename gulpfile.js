@@ -345,6 +345,15 @@ gulp.task('default', gulp.series(
 		gulp.parallel(watch, server)
 ));
 
+gulp.task('bundle', gulp.series(
+    watchScssTemplates,
+		svgSprite,
+		clean,
+    libs,
+    ...additionalTask,
+		gulp.parallel(styles, templates, fonts, gulpModules, testJsLint, images, static)
+));
+
 
 // -- BUILD PRODUCTION
 const pathsProd = {
